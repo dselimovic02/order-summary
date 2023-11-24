@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700;800&family=Montserrat:wght@500;700&family=Outfit:wght@300;400;600&family=Overpass:wght@400;700&family=Playfair:ital,opsz,wght@0,5..1200,500;0,5..1200,600;0,5..1200,700;1,5..1200,400&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    /* ### Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --White: #fff;
+
+    /* ### Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+html{
+    font-size: 10px;
+    background-color: var(--Pale-blue);
+}
+.bg-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.bg-image img{
+    width: 100vw;
+}
+
+.container{
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 45rem;
+    height: 70rem;
+    background: var(--White);
+    border-radius: 2rem;
+}
+.hero-img{
+    width: 100%;
+    border-radius: 2rem 2rem 0 0 ;
+}
+
+/*Main section*/
+.main-section{
+    width: auto;
+    text-align: center;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 4.5rem 4.9rem 0;
+}
+
+/*Fonts styles*/
+h1,
+.plan-price-container p:first-child {
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+h1{
+    font-size: 2.8rem;
+}
+.plan-price-container p:first-child{
+    position: relative;
+    font-size: 1.6rem;
+    top: -.5rem;
+}
+p{
+    font-size: 1.6rem;
+    color: var(--Desaturated-blue);
+}
+.paragraph{
+    margin-inline: 0;
+    line-height: 1.6;
+    margin-top: 2rem;
+}
+.cancel{
+    margin-top: 3.2rem;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+.cancel:hover{
+    color: var(--Dark-blue);
+    cursor: pointer;
+}
+/*Plan container*/
+.plan-container{
+    padding: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--Very-pale-blue);
+    width: 100%;
+    height: 9.8rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+.plan-container a{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--Bright-blue);
+}
+.plan-container a:hover{
+    opacity: 0.8;
+    text-decoration: none;
+}
+.plan-price-container{
+    margin-right: 7rem;
+}
+
+/*Button*/
+.proceed-to-payment{
+    width: 100%;
+    height: 5rem;
+    outline: 0;
+    border: 0;
+    border-radius: 1rem;
+    background: var(--Bright-blue);
+    color: var(--White);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    box-shadow: 0 1.4rem 2.8rem hsl(245, 75%, 52%, 0.3);
+}
+.proceed-to-payment:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/*Media Querries*/
+
+/*440px*/
+@media screen and (max-width: 440px) {
+    .card{
+        width: 40rem;
+        height: 66rem;
+    }
+    .plan-price-container{
+        margin-right: 3rem !important;
+    }
+}
+/*375px*/
+@media screen and (max-width: 375px) {
+    .card{
+        width: 33.5rem;
+        height: 60rem;
+    }
+    .main-section{
+        padding: 4rem 2.8rem 0;
+    }
+    h1{
+        font-size: 2.4rem;
+    }
+    .paragraph{
+        font-size: 1.6rem;
+        margin-inline: .5rem;
+    }
+    .plan-container{
+        height: 8.8rem;
+        padding: 1.8rem;
+    }
+    .plan-container a{
+        font-size: 1.3rem;
+        }
+    .plan-price-container{
+        margin-right: 2.4rem !important;
+    }
+    .plan-price-container p {
+        font-size: 1.5rem !important;
+    }
+}
